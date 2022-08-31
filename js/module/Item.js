@@ -358,6 +358,8 @@ class Item {
         Util.getElement('.name', div).style.marginTop = '4px';
         Util.getElement('.progress', div).style.display = 'none';
         Util.getElement('.status', div).style.marginTop = '-12px';
+        //修改Item状态，下载完成后右键菜单显示打开文件/打开文件夹
+        div.instance.data.state = State.complete;
     }
 
     eraseDownloadItem() {
